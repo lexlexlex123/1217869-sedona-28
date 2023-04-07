@@ -6,6 +6,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body class="page__body">
+    <h1 class="visually-hidden">Главная страница Седоны</h1>
     <header class="main-header">
       <a class="main-header__logo">
         <img class="main-header__logo-image" src="img/logo.png" width="185" height="96" alt="Город Седона.">
@@ -17,22 +18,22 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
-              <a href="index.html">
+              <a class="site-list__link" href="index.html">
                 Главная
               </a>
             </li>
             <li class="site-list__item">
-              <a href="catalog.html">
+              <a class="site-list__link" href="catalog.html">
                 Фото и видео
               </a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">
+              <a class="site-list__link" href="form.html">
                 Форма отзыва
               </a>
             </li>
             <li class="site-list__item">
-              <a href="https://htmlacademy.ru/">
+              <a class="site-list__link" href="https://htmlacademy.ru/">
                 HTMLACADEMY
               </a>
             </li>
@@ -45,7 +46,7 @@
     <main class="page__main">
       <section class="intro">
         <div class="intro__image">
-          <img class="real-city__image" src="img/intro_text.svg" width="282" height="214" alt="welcome to the gargeous SEDONA.">
+          <img class="welcome-title" src="img/intro_text.svg" width="282" height="214" alt="welcome to the gargeous SEDONA.">
         </div>
         <h2 class="intro__title">СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h2>
         <p class="intro__content">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -55,9 +56,9 @@
 
         <div class="advantages__real-city">
           <div class="real-city">
-            <div class="real-city__text">
+            <div class="real-city__text intro">
               <h2 class="intro__title">НАСТОЯЩИЙ ГОРОДОК</h2>
-              <span>— №1 —</span>
+              <span class="intro__number">— №1 —</span>
               <p class="intro__content">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
             </div>
             <img class="real-city__image" src="img/real_city.jpg" width="520" height="260" alt="настоящий городок.">
@@ -65,15 +66,15 @@
         </div>
 
         <div class="advantages__cards">
-          <div class="advantages__card card__house">
+          <div class="advantages__card advantages__card--house">
             <h2 class="advantages__card-title">Жилье</h2>
             <p class="advantages__card-content">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </div>
-          <div class="advantages__card card__food">
+          <div class="advantages__card advantages__card--food">
             <h2 class="advantages__card-title">Еда</h2>
             <p class="advantages__card-content">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
           </div>
-          <div class="advantages__card card__gift">
+          <div class="advantages__card advantages__card--gift">
             <h2 class="advantages__card-title">Сувениры</h2>
             <p class="advantages__card-content">Не только китайского, но и местного производства!</p>
           </div>
@@ -82,9 +83,9 @@
 
         <div class="advantages__real-city">
           <div class="real-city">
-            <div class="real-city__text">
+            <div class="real-city__text intro">
               <h2 class="intro__title">Там есть мост дъявола</h2>
-              <span>— №2 —</span>
+              <span class="intro__number">— №2 —</span>
               <p class="intro__content">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
             <img class="real-city__image" src="img/bridge_diablo.jpg" width="520" height="260" alt="мост дъявола.">
@@ -95,17 +96,17 @@
         <div class="advantages__cards-more">
           <div class="advantages__card">
             <h2 class="advantages__card-title">Небольшая площадь</h2>
-            <span>— №3 —</span>
+            <span class="advantages__card-number">— №3 —</span>
             <p class="advantages__card-content">ВСЕ интересные места находятся очень близко</p>
           </div>
           <div class="advantages__card">
             <h2 class="advantages__card-title">Красивая дорога</h2>
-            <span>— №4 —</span>
+            <span class="advantages__card-number">— №4 —</span>
             <p class="advantages__card-content">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
           </div>
           <div class="advantages__card">
             <h2 class="advantages__card-title">Мало туристов</h2>
-            <span>— №5 —</span>
+            <span class="advantages__card-number">— №5 —</span>
             <p class="advantages__card-content">Большинство едет в гранд каньони толпится там</p>
           </div>
         </div>
@@ -116,7 +117,7 @@
       <section class="search-hotel">
         <h2 class="search-hotel__title">Заинтересовались?</h2>
         <p class="search-hotel__content">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a href="#" class="button" title="перейти на страницу с выбором гостиницы.">Найти гостиницу</a>
+        <a class="search-hotel__button" href="catalog.html" title="перейти на страницу с выбором гостиницы.">Найти гостиницу</a>
       </section>
 
       <section class="map">
@@ -124,23 +125,25 @@
       </section>
     </main>
 
+
     <footer class="page__footer">
       <h2 class="page__main-title">#visitSEDONA</h2>
       <ul class="footer-social">
         <li class="footer-social__item">
-          <a href="https://vk.com/htmlacademy" title="перейти в ВК."></a>
+          <a class="footer-social__link" href="https://vk.com/htmlacademy" title="перейти в ВК."></a>
         </li>
         <li class="footer-social__item">
-          <a href="https://t.me/htmlacademy" title="перейти в телеграмм."></a>
+          <a class="footer-social__link" href="https://t.me/htmlacademy" title="перейти в телеграмм."></a>
         </li>
         <li class="footer-social__item">
-          <a href="https://www.youtube.com/user/htmlacademyru" title="перейти на youtube."></a>
+          <a class="footer-social__link" href="https://www.youtube.com/user/htmlacademyru" title="перейти на youtube."></a>
         </li>
       </ul>
 
       <div class="dev">
-        <span>Разработано</span>
+        <span class="dev__content">Разработано</span>
       </div>
     </footer>
+
   </body>
 </html>

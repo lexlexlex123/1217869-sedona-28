@@ -6,6 +6,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body class="page__body">
+    <h1 class="visually-hidden">Форма отзыва</h1>
     <header class="main-header">
       <a class="main-header__logo">
         <img class="main-header__logo-image" src="img/logo.png" width="185" height="96" alt="Город Седона.">
@@ -16,23 +17,23 @@
         <span class="visually-hidden">Открыть меню</span>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a href="index.html">
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html">
                 Главная
               </a>
             </li>
             <li class="site-list__item">
-              <a href="catalog.html">
+              <a class="site-list__link" href="catalog.html">
                 Фото и видео
               </a>
             </li>
-            <li class="site-list__item">
-              <a href="form.html">
+            <li class="site-list__item site-list__item--active">
+              <a class="site-list__link" href="form.html">
                 Форма отзыва
               </a>
             </li>
             <li class="site-list__item">
-              <a href="https://htmlacademy.ru/">
+              <a class="site-list__link" href="https://htmlacademy.ru/">
                 HTMLACADEMY
               </a>
             </li>
@@ -44,7 +45,7 @@
 
     <main class="page__main">
       <section class="intro">
-        <div class="intro__image">
+        <div class="intro__image real-city">
           <img class="real-city__image" src="img/intro_text.svg" width="282" height="214" alt="welcome to the gargeous SEDONA.">
         </div>
         <h2 class="intro__title">Оставьте свой отзыв</h2>
@@ -129,23 +130,25 @@
 
     </main>
 
+
     <footer class="page__footer">
       <h2 class="page__main-title">#visitSEDONA</h2>
       <ul class="footer-social">
         <li class="footer-social__item">
-          <a href="https://vk.com/htmlacademy" title="перейти в ВК."></a>
+          <a class="footer-social__link" href="https://vk.com/htmlacademy" title="перейти в ВК."></a>
         </li>
         <li class="footer-social__item">
-          <a href="https://t.me/htmlacademy" title="перейти в телеграмм."></a>
+          <a class="footer-social__link" href="https://t.me/htmlacademy" title="перейти в телеграмм."></a>
         </li>
         <li class="footer-social__item">
-          <a href="https://www.youtube.com/user/htmlacademyru" title="перейти на youtube."></a>
+          <a class="footer-social__link" href="https://www.youtube.com/user/htmlacademyru" title="перейти на youtube."></a>
         </li>
       </ul>
 
       <div class="dev">
-        <span>Разработано</span>
+        <span class="dev__content">Разработано</span>
       </div>
     </footer>
+
   </body>
 </html>
