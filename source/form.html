@@ -57,62 +57,62 @@
         <form action="form.html" method="post">
           <div class="form__item">
             <h2 class="form__title">Представьтесь:</h2>
-            <label class="form-label" for="name">Имя*:</label>
-            <input class="input-text" type="text" id="name" value="Пётр" required>
-            <label class="form-label" for="name">Фамилия*:</label>
-            <input class="input-text" type="text" id="name" value="Пустота" required>
-            <label class="form-label" for="name">Отчество:</label>
-            <input class="input-text" type="text" id="name" value="Викторович">
+            <label class="form__label" for="name">Имя*:</label>
+            <input class="input__text" type="text" id="name" value="Пётр" required>
+            <label class="form__label" for="suname">Фамилия*:</label>
+            <input class="input__text" type="text" id="suname" value="Пустота" required>
+            <label class="form__label" for="susuname">Отчество:</label>
+            <input class="input__text" type="text" id="susuname" value="Викторович">
           </div>
 
           <div class="form__item">
             <h2 class="form__title">Контактная информация:</h2>
-            <label class="form-label" for="name">Контактный телефон*:</label>
-            <input class="input-text" type="text" id="name" placeholder="Введите телефон" required>
-            <label class="form-label" for="name">Электронная почта*:</label>
-            <input class="input-text" type="text" id="name" placeholder="Введите e-mail" required>
+            <label class="form__label" for="phone">Контактный телефон*:</label>
+            <input class="input__text" type="text" id="phone" placeholder="Введите телефон" required>
+            <label class="form__label" for="email">Электронная почта*:</label>
+            <input class="input__text" type="email" id="email" placeholder="Введите e-mail" required>
           </div>
 
           <div class="form__item">
             <h2 class="form__title">Ваше общее впечатление:</h2>
-            <label class="filter-label">
+            <label class="form__filter">
               <input type="radio" name="review" value="positiv">
-              <span class="control-mark-round"></span>
-              <span class="control-label">Скорее положительное</span>
+              <span class="form__control-mark-round"></span>
+              <span class="form__control-label">Скорее положительное</span>
             </label>
-            <label class="filter-label">
+            <label class="form__filter">
               <input type="radio" name="review" value="negativ">
-              <span class="control-mark-round"></span>
-              <span class="control-label">Скорее отрицательное</span>
+              <span class="form__control-mark-round"></span>
+              <span class="form__control-label">Скорее отрицательное</span>
             </label>
-            <label class="filter-label">
+            <label class="form__filter">
               <input type="radio" name="review" value="indefinite">
-              <span class="control-mark-round"></span>
-              <span class="control-label">Затрудняюсь ответить</span>
+              <span class="form__control-mark-round"></span>
+              <span class="form__control-label">Затрудняюсь ответить</span>
             </label>
           </div>
 
           <div class="form__item">
             <h2 class="form__title">посещенные достопримечательности:</h2>
-            <label class="filter-label">
+            <label class="form__filter">
               <input type="checkbox" name="attraction-bridge" checked>
-              <span class="control-mark"></span>
-              <span class="control-label">Мост Дьявола</span>
+              <span class="form__control-mark"></span>
+              <span class="form__control-label">Мост Дьявола</span>
             </label>
-            <label class="filter-label">
+            <label class="form__filter">
               <input type="checkbox" name="attraction-mountain" checked>
-              <span class="control-mark"></span>
-              <span class="control-label">Гора-Колокол</span>
+              <span class="form__control-mark"></span>
+              <span class="form__control-label">Гора-Колокол</span>
             </label>
-            <label class="filter-label">
+            <label class="form__filter">
               <input type="checkbox" name="attraction-park" checked>
-              <span class="control-mark"></span>
-              <span class="control-label">Слайд-парк</span>
+              <span class="form__control-mark"></span>
+              <span class="form__control-label">Слайд-парк</span>
             </label>
-            <label class="filter-label">
+            <label class="form__filter">
               <input type="checkbox" name="attraction-red">
-              <span class="control-mark"></span>
-              <span class="control-label">Красные скалы</span>
+              <span class="form__control-mark"></span>
+              <span class="form__control-label">Красные скалы</span>
             </label>
           </div>
 
@@ -123,7 +123,7 @@
 
           <div class="form__item">
             <button class="form__button" type="button">Отправить отзыв</button>
-            <span>* — обязательные поля</span>
+            <span class="form__text-after">* — обязательные поля</span>
           </div>
 
         </form>
