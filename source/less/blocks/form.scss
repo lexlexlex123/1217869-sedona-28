@@ -1,0 +1,146 @@
+.form {
+
+}
+
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__item {
+  padding: 24px 20px 23px;
+  border-top: 1px solid #E5E5E5;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &:last-child {
+    border-top: none;
+  }
+}
+
+.form__title {
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form__label {
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.form__label-text {
+  margin-left: 16px;
+}
+
+.input__text {
+  background-color: #F2F2F2;
+  padding: 16px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  border: none;
+  margin-bottom: 16px;
+}
+
+.form__filter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.form__control-mark-round {
+  width: 46px;
+  height: 46px;
+  background-color: #F2F2F2;
+  border-radius: 50%;
+  position: relative;
+}
+
+.form__control-label {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.form__radio-button {
+  display: none;
+}
+
+.form__radio-button:checked + .form__control-mark-round::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-left: 15px;
+  margin-top: 16px;
+  border-radius: 50%;
+  background-color: #333333;
+}
+
+.form__check-button {
+  display: none;
+}
+
+.form__control-mark {
+  width: 46px;
+  height: 46px;
+  background-color: #F2F2F2;
+  position: relative;
+}
+
+.form__check-button:checked + .form__control-mark::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 16px;
+  background-image: url("../img/tick.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin-left: 12px;
+  margin-top: 15px;
+}
+
+.form__textuser {
+  height: 150px;
+  padding: 16px;
+  background-color: #F2F2F2;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.3);
+  border: none;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+  }
+}
+
+.form__button {
+  background-color: #81B3D2;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+  padding: 16px;
+  border: none;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.form__text-after {
+  align-self: flex-end;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: -16px;
+  color: rgba(51, 51, 51, 0.6);
+}

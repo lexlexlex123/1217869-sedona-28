@@ -1,0 +1,103 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+}
+
+.advantages__real-city {
+  background-color: #81B3D2;
+  color: #FFFFFF;
+}
+
+.advantages__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 37px 18px 37px 65px;
+}
+
+.advantages__card-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.advantages__card-content {
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #333333;
+  margin: 0;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.advantages__card-content-benefits {
+  text-align: left;
+}
+
+.advantages__cards-more {
+  display: flex;
+  flex-direction: column;
+  padding: 0 18px;
+  background: #eeeeee;
+}
+
+.advantages__card-more {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  padding: 24px 20px;
+}
+
+.advantages__card-more:not(:last-child) {
+  border-bottom: solid 1px #d6d6d6;
+}
+
+.advantages__card--house {
+  position: relative;
+}
+
+.advantages__card--house::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icon-house.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60px - 18px;
+  height: 37px;
+  left: -65px + 18px;
+}
+
+.advantages__card--food {
+  position: relative;
+}
+
+.advantages__card--food::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icon-burger.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60px - 18px;
+  height: 37px;
+  left: -65px + 18px;
+}
+
+.advantages__card--gift {
+  position: relative;
+}
+
+.advantages__card--gift::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icon-gift.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60px - 18px;
+  height: 37px;
+  left: -65px + 18px;
+}
