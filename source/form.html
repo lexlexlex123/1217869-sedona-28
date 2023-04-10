@@ -71,39 +71,44 @@
       </section>
 
       <section class="form">
-        <form action="form.html" method="post">
+        <form class="form__wrapper" action="form.html" method="post">
           <div class="form__item">
             <h2 class="form__title">Представьтесь:</h2>
-            <label class="form__label" for="name">Имя*:</label>
-            <input class="input__text" type="text" id="name" value="Пётр" required>
-            <label class="form__label" for="suname">Фамилия*:</label>
-            <input class="input__text" type="text" id="suname" value="Пустота" required>
-            <label class="form__label" for="susuname">Отчество:</label>
-            <input class="input__text" type="text" id="susuname" value="Викторович">
+            <label class="form__label" for="name"><span class="form__label-text">Имя*:</span>
+              <input class="input__text" type="text" id="name" value="Пётр" required>
+            </label>
+            <label class="form__label" for="suname"><span class="form__label-text">Фамилия*:</span>
+              <input class="input__text" type="text" id="suname" value="Пустота" required>
+            </label>
+            <label class="form__label" for="susuname"><span class="form__label-text">Отчество:</span>
+              <input class="input__text" type="text" id="susuname" value="Викторович">
+            </label>
           </div>
 
           <div class="form__item">
             <h2 class="form__title">Контактная информация:</h2>
-            <label class="form__label" for="phone">Контактный телефон*:</label>
-            <input class="input__text" type="text" id="phone" placeholder="Введите телефон" required>
-            <label class="form__label" for="email">Электронная почта*:</label>
-            <input class="input__text" type="email" id="email" placeholder="Введите e-mail" required>
+            <label class="form__label" for="phone"><span class="form__label-text">Контактный телефон*:</span>
+              <input class="input__text" type="text" id="phone" placeholder="Введите телефон" required>
+            </label>
+            <label class="form__label" for="email"><span class="form__label-text">Электронная почта*:</span>
+              <input class="input__text" type="email" id="email" placeholder="Введите e-mail" required>
+            </label>
           </div>
 
           <div class="form__item">
             <h2 class="form__title">Ваше общее впечатление:</h2>
             <label class="form__filter">
-              <input type="radio" name="review" value="positiv">
+              <input class="form__radio-button" type="radio" name="review" value="positiv" checked>
               <span class="form__control-mark-round"></span>
               <span class="form__control-label">Скорее положительное</span>
             </label>
             <label class="form__filter">
-              <input type="radio" name="review" value="negativ">
+              <input class="form__radio-button" type="radio" name="review" value="negativ">
               <span class="form__control-mark-round"></span>
               <span class="form__control-label">Скорее отрицательное</span>
             </label>
             <label class="form__filter">
-              <input type="radio" name="review" value="indefinite">
+              <input class="form__radio-button" type="radio" name="review" value="indefinite">
               <span class="form__control-mark-round"></span>
               <span class="form__control-label">Затрудняюсь ответить</span>
             </label>
@@ -112,22 +117,22 @@
           <div class="form__item">
             <h2 class="form__title">посещенные достопримечательности:</h2>
             <label class="form__filter">
-              <input type="checkbox" name="attraction-bridge" checked>
+              <input class="form__check-button" type="checkbox" name="attraction-bridge" checked>
               <span class="form__control-mark"></span>
               <span class="form__control-label">Мост Дьявола</span>
             </label>
             <label class="form__filter">
-              <input type="checkbox" name="attraction-mountain" checked>
+              <input class="form__check-button" type="checkbox" name="attraction-mountain" checked>
               <span class="form__control-mark"></span>
               <span class="form__control-label">Гора-Колокол</span>
             </label>
             <label class="form__filter">
-              <input type="checkbox" name="attraction-park" checked>
+              <input class="form__check-button" type="checkbox" name="attraction-park" checked>
               <span class="form__control-mark"></span>
               <span class="form__control-label">Слайд-парк</span>
             </label>
             <label class="form__filter">
-              <input type="checkbox" name="attraction-red">
+              <input class="form__check-button" type="checkbox" name="attraction-red">
               <span class="form__control-mark"></span>
               <span class="form__control-label">Красные скалы</span>
             </label>
