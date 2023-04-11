@@ -1,3 +1,32 @@
 .catalog-info {
+  display: flex;
+  flex-direction: column;
+  padding: 17px 20px 0;
+  justify-content: center;
+  gap: 38px;
+}
 
+.catalog-info__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+}
+
+.catalog-info__content {
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 8px;
+}
+
+.catalog-info__video {
+  background-image: url("../img/video-mobile.jpg") ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  width: 100%;
 }
