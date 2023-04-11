@@ -32,6 +32,8 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
 }
 
 .form__label-text {
