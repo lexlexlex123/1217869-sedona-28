@@ -1,15 +1,11 @@
-.catalog {
-
-}
-
 .catalog__item {
   padding: 24px 20px 25px;
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #E5E5E5;
+  border-top: 1px solid #e5e5e5;
 
   &:last-child {
-    border-bottom: 1px solid #E5E5E5;
+    border-bottom: 1px solid #e5e5e5;
   }
 }
 
