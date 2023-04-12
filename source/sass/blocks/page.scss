@@ -27,6 +27,12 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 36px 0;
+  }
 }
 
 .page__main-title {

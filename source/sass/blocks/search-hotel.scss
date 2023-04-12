@@ -7,6 +7,12 @@
   width: 100%;
   box-sizing: border-box;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 458px;
+    margin: 55px auto;
+    padding: 0;
+  }
 }
 
 .search-hotel__title {

@@ -33,16 +33,19 @@
             <button class="main-nav__close-menu" type="button" onclick="closemenu();">
               <span class="visually-hidden">Закрыть меню</span>
             </button>
+            <div class="site-list__link-wrapper">
             <a class="site-list__link" href="index.html">
               <li class="site-list__item site-list__item--active">
                 Главная
               </li>
             </a>
             <a class="site-list__link" href="catalog.html">
-            <li class="site-list__item">
+              <li class="site-list__item">
                 Фото и видео
-            </li>
+              </li>
             </a>
+            </div>
+            <div class="site-list__link-wrapper">
             <a class="site-list__link" href="form.html">
               <li class="site-list__item">
                 Форма отзыва
@@ -53,6 +56,7 @@
                 HTMLACADEMY
               </li>
             </a>
+            </div>
           </ul>
         </div>
       </nav>
@@ -63,6 +67,8 @@
       <section class="intro">
         <div class="intro__image">
           <img class="welcome-title" src="img/intro_text.svg" width="282" height="214" alt="welcome to the gargeous SEDONA.">
+          <div class="intro__decor-left"></div>
+          <div class="intro__decor-right"></div>
         </div>
         <div class="intro__content">
           <h2 class="intro__title">СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h2>
@@ -73,6 +79,8 @@
       <section class="advantages">
 
         <div class="advantages__real-city">
+          <div class="advantages__decor-left"></div>
+          <div class="advantages__decor-right"></div>
           <div class="real-city">
             <div class="real-city__text intro-real-city">
               <h2 class="intro-real-city__title">НАСТОЯЩИЙ ГОРОДОК</h2>
@@ -84,23 +92,23 @@
         </div>
 
         <div class="advantages__cards">
-          <div class="advantages__card advantages__card--house">
-            <h2 class="advantages__card-title">Жилье</h2>
+          <div class="advantages__card">
+            <h2 class="advantages__card-title advantages__card--house">Жилье</h2>
             <p class="advantages__card-content advantages__card-content-benefits">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </div>
-          <div class="advantages__card advantages__card--food">
-            <h2 class="advantages__card-title">Еда</h2>
+          <div class="advantages__card">
+            <h2 class="advantages__card-title advantages__card--food">Еда</h2>
             <p class="advantages__card-content advantages__card-content-benefits">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
           </div>
-          <div class="advantages__card advantages__card--gift">
-            <h2 class="advantages__card-title">Сувениры</h2>
+          <div class="advantages__card">
+            <h2 class="advantages__card-title advantages__card--gift">Сувениры</h2>
             <p class="advantages__card-content advantages__card-content-benefits">Не только китайского, но и местного производства!</p>
           </div>
         </div>
 
 
         <div class="advantages__real-city">
-          <div class="real-city">
+          <div class="real-city real-city--invert">
             <div class="real-city__text intro-real-city">
               <h2 class="intro-real-city__title">Там есть мост дъявола</h2>
               <span class="intro-real-city__number">— №2 —</span>
