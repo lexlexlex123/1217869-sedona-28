@@ -5,6 +5,7 @@
   height: 100%;
   width: 100%;
   padding-right: 20px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     padding-right: 0;
@@ -40,39 +41,49 @@
   }
 }
 
+.main-nav__toggle-wrapper {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
 .main-nav__toggle {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   width: 23px;
   height: 4px;
   background-color: #81b3d2;
-  border: none;
   position: relative;
   margin: 0;
 
   &::before {
     content: "";
-    position: absolute;
-    display: block;
+    display: flex;
     width: 23px;
-    height: 4px;
-    margin-top: -9px;
-    transform: translateX(-6px);
+    min-height: 4px;
+    transform: translateY(-8px);
     background-color: #81b3d2;
   }
 
   &::after {
     content: "";
-    position: absolute;
-    display: block;
+    display: flex;
     width: 23px;
-    height: 4px;
-    margin-top: 6px;
-    transform: translateX(-6px);
+    min-height: 4px;
     background-color: #81b3d2;
-  }
-
-  @media (min-width: $tablet-width) {
-    display: none;
   }
 }
 
@@ -82,12 +93,13 @@
   width: 55px;
   top: 0;
   right: 0;
-  background-image: url("../img/icon-cross.png");
+  background-image: url("../img/icon-cross.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-color: transparent;
   border: none;
   z-index: 2;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     display: none;
