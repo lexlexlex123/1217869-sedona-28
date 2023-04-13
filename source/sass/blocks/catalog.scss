@@ -15,10 +15,10 @@
 }
 
 .catalog__item {
-  padding: 0 0 25px;
   display: flex;
   flex-direction: column;
   border-top: 1px solid #e5e5e5;
+  position: relative;
 
   &:last-child {
     border-bottom: 1px solid #e5e5e5;
@@ -45,9 +45,31 @@
 }
 
 .catalog__image {
-  margin-bottom: 15px;
   width: 100%;
   object-fit: cover;
+}
+
+.catalog__description {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0 25px;
+
+  @media (min-width: $tablet-width) {
+    background-color: #f2f2f2;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 20px 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+  }
 }
 
 .catalog__title {
@@ -60,24 +82,44 @@
 
 .catalog__avtor {
   margin: 0;
-  margin-bottom: 11px;
   font-size: 14px;
   line-height: 21px;
 }
 
 .catalog__like {
   display: flex;
+  margin-top: 11px;
   gap: 14px;
   align-items: flex-end;
   font-weight: 700;
   font-size: 14px;
   line-height: 14px;
 
-  &::before {
-    content: "";
-    background-image: url("../img/like-icon.png");
-    background-repeat: no-repeat;
-    width: 23px;
-    height: 21px;
+  @media (min-width: $tablet-width) {
+    margin-top: -8px;
+  }
+
+  & svg {
+    fill: rgba(0, 0, 0, 0.3);
+
+    @media (min-width: $desktop-width) {
+      fill: #ffffff;
+    }
+  }
+}
+
+.catalog__video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 60px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 199px 84px;
   }
 }

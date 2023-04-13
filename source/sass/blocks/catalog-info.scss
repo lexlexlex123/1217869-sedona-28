@@ -1,9 +1,17 @@
 .catalog-info {
   display: flex;
   flex-direction: column;
-  padding: 17px 20px 0;
+  padding: 17px 6px 38px;
   justify-content: center;
   gap: 38px;
+
+  @media (min-width: $tablet-width) {
+    padding: 58px 100px 66px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 62px 377px 64px;
+  }
 }
 
 .catalog-info__title {
@@ -20,13 +28,4 @@
   line-height: 21px;
   text-transform: uppercase;
   text-align: center;
-  margin: 0 8px;
-}
-
-.catalog-info__video {
-  background-image: url("../img/video-mobile.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: auto;
-  width: 100%;
 }
