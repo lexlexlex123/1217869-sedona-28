@@ -1,0 +1,107 @@
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-right: 20px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 0;
+  }
+}
+
+.main-nav__wrapper {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    display: flex;
+  }
+}
+
+.main-nav__list {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 100px;
+  }
+}
+
+.main-nav__toggle-wrapper {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 23px;
+  height: 4px;
+  background-color: #81b3d2;
+  position: relative;
+  margin: 0;
+
+  &::before {
+    content: "";
+    display: flex;
+    width: 23px;
+    min-height: 4px;
+    transform: translateY(-8px);
+    background-color: #81b3d2;
+  }
+
+  &::after {
+    content: "";
+    display: flex;
+    width: 23px;
+    min-height: 4px;
+    background-color: #81b3d2;
+  }
+}
+
+.main-nav__close-menu {
+  position: absolute;
+  height: 55px;
+  width: 55px;
+  top: 0;
+  right: 0;
+  background-image: url("../img/icon-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+  border: none;
+  z-index: 2;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}

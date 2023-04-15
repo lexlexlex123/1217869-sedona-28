@@ -1,0 +1,79 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro__image {
+  width: 100%;
+  padding: 90px 0 85px;
+  background-color: #333333;
+  background-image: url("../img/sedona.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.intro__title {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.intro__text {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.intro__content {
+  padding: 37px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding: 47px 124px 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 59px 357px 44px;
+  }
+}
+
+.intro__decor-left {
+  display: flex;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 57px;
+  background-image: url("../img/intro-decor.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  position: absolute;
+}
+
+.intro__decor-right {
+  display: flex;
+  width: 50%;
+  height: 57px;
+  left: 50%;
+  bottom: 0;
+  background-image: url("../img/intro-decor.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  transform: scaleX(-1);
+  position: absolute;
+}

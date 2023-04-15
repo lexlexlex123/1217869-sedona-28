@@ -1,0 +1,27 @@
+.real-city {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.real-city__image {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  object-fit: cover;
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    height: 256px;
+  }
+}
+
+.real-city--invert {
+  @media (min-width: $tablet-width) {
+    flex-direction: row-reverse;
+  }
+}
