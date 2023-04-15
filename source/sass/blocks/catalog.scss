@@ -98,13 +98,13 @@
   @media (min-width: $tablet-width) {
     margin-top: -8px;
   }
+}
 
-  & svg {
-    fill: rgba(0, 0, 0, 0.3);
+.catalog__icon-like {
+  fill: rgba(0, 0, 0, 0.3);
 
-    @media (min-width: $desktop-width) {
-      fill: #ffffff;
-    }
+  @media (min-width: $desktop-width) {
+    fill: #ffffff;
   }
 }
 

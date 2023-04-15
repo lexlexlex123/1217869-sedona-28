@@ -136,11 +136,11 @@
   }
 }
 
-.advantages__card--house {
+.advantages__card-title--house {
   position: relative;
 }
 
-.advantages__card--house::before {
+.advantages__card-title--house::before {
   content: "";
   position: absolute;
   background-image: url("../img/icon-house.svg");
@@ -160,11 +160,11 @@
   }
 }
 
-.advantages__card--food {
+.advantages__card-title--food {
   position: relative;
 }
 
-.advantages__card--food::before {
+.advantages__card-title--food::before {
   content: "";
   position: absolute;
   background-image: url("../img/icon-burger.svg");
@@ -184,11 +184,11 @@
   }
 }
 
-.advantages__card--gift {
+.advantages__card-title--gift {
   position: relative;
 }
 
-.advantages__card--gift::before {
+.advantages__card-title--gift::before {
   content: "";
   position: absolute;
   background-image: url("../img/icon-gift.svg");
