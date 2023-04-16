@@ -34,7 +34,7 @@
   }
 }
 
-.catalog__item:first-child {
+.catalog__item--fullwidth {
   @media (min-width: $tablet-width) {
     grid-column: 1 / span 2;
   }
