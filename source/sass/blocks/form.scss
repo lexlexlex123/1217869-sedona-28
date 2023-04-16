@@ -58,6 +58,10 @@
       display: flex;
       padding: 0 50px;
     }
+
+    @media (min-width: $tablet-width) {
+      justify-content: flex-start;
+    }
   }
 
   & .form__item:first-child {
