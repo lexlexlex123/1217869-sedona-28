@@ -1,12 +1,22 @@
 .advantages {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .advantages__real-city {
   background-color: #81b3d2;
   color: #ffffff;
   position: relative;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .advantages__real-city:first-child {
@@ -52,13 +62,16 @@
 }
 
 .advantages__cards {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  list-style: none;
   gap: 25px;
   padding: 37px 18px 37px 65px;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 0;
     padding: 0;
   }
@@ -77,6 +90,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+  text-align: center;
   text-transform: uppercase;
   margin: 0;
 }
@@ -104,13 +118,13 @@
 }
 
 .advantages__cards-more {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   padding: 0 18px;
   background: #eeeeee;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 0;
   }
 }
@@ -138,6 +152,7 @@
 
 .advantages__card-title--house {
   position: relative;
+  text-align: left;
 }
 
 .advantages__card-title--house::before {
@@ -162,6 +177,7 @@
 
 .advantages__card-title--food {
   position: relative;
+  text-align: left;
 }
 
 .advantages__card-title--food::before {
@@ -186,6 +202,7 @@
 
 .advantages__card-title--gift {
   position: relative;
+  text-align: left;
 }
 
 .advantages__card-title--gift::before {
