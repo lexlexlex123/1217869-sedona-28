@@ -17,6 +17,18 @@
   display: flex;
   justify-content: center;
   position: relative;
+
+  &::after {
+    content: "";
+    width: 1202px;
+    height: 57px;
+    position: absolute;
+    background-image: url("../img/intro-decor.svg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    bottom: 0;
+    z-index: 1;
+  }
 }
 
 .intro__title {
