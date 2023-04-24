@@ -7,14 +7,35 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script>
-        function openmenu() {
-          let menu = document.getElementsByClassName("main-nav__wrapper")[0];
-          menu.style.display = "flex";
-        }
-        function closemenu() {
-          let menu = document.getElementsByClassName("main-nav__wrapper")[0];
+      window.onload = function () {
+        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
+        if (window.screen.width < 768) {
           menu.style.display = "none";
         }
+        else {
+          menu.style.display = "flex";
+        }
+      }
+
+      window.onresize = function () {
+        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
+        if (window.screen.width >= 768) {
+          menu.style.display = "flex";
+        }
+        else {
+          menu.style.display = "none";
+        }
+      }
+
+      function openmenu() {
+        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
+        menu.style.display = "flex";
+      }
+
+      function closemenu() {
+        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
+        menu.style.display = "none";
+      }
     </script>
   </head>
   <body class="page__body">
@@ -122,7 +143,7 @@
             <div class="advantages__card-more">
               <h2 class="advantages__card-title">Мало туристов</h2>
               <span class="advantages__card-number">— №5 —</span>
-              <p class="advantages__card-content">Большинство едет в гранд каньони толпится там</p>
+              <p class="advantages__card-content">Большинство едет в гранд каньон и толпится там</p>
             </div>
           </li>
         </ul>

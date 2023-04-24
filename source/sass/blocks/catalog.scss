@@ -46,9 +46,27 @@
   }
 }
 
+.catalog__open {
+  margin: 0;
+}
+
 .catalog__image {
   width: 100%;
   object-fit: cover;
+  display: flex;
+}
+
+.catalog__image--full {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 2;
+  box-sizing: border-box;
 }
 
 .catalog__description {

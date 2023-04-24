@@ -7,13 +7,34 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script>
+      window.onload = function () {
+        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
+        if (window.screen.width < 768) {
+          menu.style.display = "none";
+        }
+        else {
+          menu.style.display = "flex";
+        }
+      }
+
+      window.onresize = function () {
+        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
+        if (window.screen.width >= 768) {
+          menu.style.display = "flex";
+        }
+        else {
+          menu.style.display = "none";
+        }
+      }
+
       function openmenu() {
         let menu = document.getElementsByClassName("main-nav__wrapper")[0];
         menu.style.display = "flex";
       }
+
       function closemenu() {
-          let menu = document.getElementsByClassName("main-nav__wrapper")[0];
-          menu.style.display = "none";
+        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
+        menu.style.display = "none";
       }
     </script>
   </head>
@@ -34,7 +55,7 @@
             <span class="visually-hidden">Закрыть меню</span>
           </button>
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item">
               <a class="site-list__link" href="index.html">
                 Главная
               </a>
@@ -46,7 +67,7 @@
             </li>
             <li class="site-list__item site-list__item--blank">
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--active">
               <a class="site-list__link" href="form.html">
                 Форма отзыва
               </a>
@@ -78,23 +99,27 @@
             <div class="form__item">
               <h2 class="form__title">Представьтесь:</h2>
               <label class="form__label" for="name"><span class="form__label-text">Имя*:</span>
-                <input class="form__input" type="text" id="name" value="Пётр" required>
+                <input class="form__input" type="text" id="name" placeholder="Имя" required>
               </label>
               <label class="form__label" for="suname"><span class="form__label-text">Фамилия*:</span>
-                <input class="form__input" type="text" id="suname" value="Пустота" required>
+                <input class="form__input" type="text" id="suname" placeholder="Фамилия" required>
               </label>
               <label class="form__label" for="susuname"><span class="form__label-text">Отчество:</span>
-                <input class="form__input" type="text" id="susuname" value="Викторович">
+                <input class="form__input" type="text" id="susuname" placeholder="Отчество">
               </label>
             </div>
 
             <div class="form__item">
               <h2 class="form__title">Контактная информация:</h2>
               <label class="form__label" for="phone"><span class="form__label-text">Контактный телефон*:</span>
-                <input class="form__input" type="text" id="phone" placeholder="Введите телефон" required>
+                <div class="form__input-wrapper form__input-wrapper--phone">
+                  <input class="form__input form__input--phone" type="tel" id="phone" placeholder="Введите телефон" required>
+                </div>
               </label>
               <label class="form__label" for="email"><span class="form__label-text">Электронная почта*:</span>
-                <input class="form__input" type="email" id="email" placeholder="Введите e-mail" required>
+                <div class="form__input-wrapper form__input-wrapper--mail">
+                  <input class="form__input form__input--mail" type="email" id="email" placeholder="Введите e-mail" required>
+                </div>
               </label>
             </div>
           </div>
