@@ -314,16 +314,45 @@
   }
 }
 
-.form__check-button:checked + .form__control-mark::after {
-  content: "";
-  position: absolute;
-  width: 22px;
-  height: 16px;
-  background-image: url("../img/tick.png");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  margin-left: 12px;
-  margin-top: 15px;
+.form__check-button + .form__control-mark {
+  background-color: #f2f2f2;
+}
+
+.form__check-button:focus-within + .form__control-mark {
+  background-color: #d5d5d5;
+}
+
+.form__check-button:checked:focus-within + .form__control-mark {
+  background-color: #d5d5d5;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 16px;
+    background-image: url("../img/tick.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin-left: 12px;
+    margin-top: 15px;
+    opacity: 0.3;
+  }
+}
+
+.form__check-button:checked + .form__control-mark {
+  background-color: #f2f2f2;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 16px;
+    background-image: url("../img/tick.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin-left: 12px;
+    margin-top: 15px;
+  }
 }
 
 .form__textuser {
@@ -380,12 +409,18 @@
   text-transform: uppercase;
   margin: 0;
   cursor: pointer;
+  outline: none;
 
   &:hover {
     background-color: #669ec0;
   }
 
   &:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:focus {
     background-color: #5496bd;
     color: rgba(255, 255, 255, 0.3);
   }
