@@ -13,7 +13,7 @@
 }
 
 .main-nav__wrapper {
-  display: none;
+  display: flex;
   position: absolute;
   width: 100%;
   top: 0;
@@ -102,5 +102,13 @@
 
   @media (min-width: $tablet-width) {
     display: none;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

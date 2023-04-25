@@ -7,14 +7,35 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script>
-        function openmenu() {
-          let menu = document.getElementsByClassName("main-nav__wrapper")[0];
-          menu.style.display = "flex";
-        }
-        function closemenu() {
-          let menu = document.getElementsByClassName("main-nav__wrapper")[0];
+      window.onload = function () {
+        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
+        if (window.screen.width < 768) {
           menu.style.display = "none";
         }
+        else {
+          menu.style.display = "flex";
+        }
+      }
+
+      window.onresize = function () {
+        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
+        if (window.screen.width >= 768) {
+          menu.style.display = "flex";
+        }
+        else {
+          menu.style.display = "none";
+        }
+      }
+
+      function openmenu() {
+        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
+        menu.style.display = "flex";
+      }
+
+      function closemenu() {
+        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
+        menu.style.display = "none";
+      }
     </script>
   </head>
   <body class="page__body">
@@ -122,7 +143,7 @@
             <div class="advantages__card-more">
               <h2 class="advantages__card-title">Мало туристов</h2>
               <span class="advantages__card-number">— №5 —</span>
-              <p class="advantages__card-content">Большинство едет в гранд каньони толпится там</p>
+              <p class="advantages__card-content">Большинство едет в гранд каньон и толпится там</p>
             </div>
           </li>
         </ul>
@@ -137,7 +158,7 @@
 
       <section class="map">
         <h2 class="visually-hidden">карта аризоны</h2>
-        <img class="map__image" src="img/map.jpg" width="320" height="350" alt="карта аризоны.">
+        <iframe class="map__image" alt="карта аризоны." src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2280353.907615116!2d-113.36299634072586!3d34.483713866306964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b08ebcb4c186b%3A0x423927b17fc1cd71!2z0JDRgNC40LfQvtC90LAsINCh0KjQkA!5e0!3m2!1sru!2sru!4v1682080552109!5m2!1sru!2sru" width="320" height="350" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
     </main>
 
@@ -173,6 +194,9 @@
 
       <div class="dev">
         <span class="dev__content">Разработано</span>
+        <svg width="28" height="33" viewBox="0 0 28 33" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.1506 0.25H14.0502L0.5 1.58944V25.221L14.0502 32.875L27.5 25.221V1.58944L14.1506 0.25ZM25.5929 11.8266L14.0502 5.32075V5.22507H13.9498L13.8494 5.1294V5.22507L2.40706 11.8266V3.21591L13.9498 2.06782L25.5929 3.21591V11.8266ZM13.9498 6.75587L25.4926 13.1661L20.9758 15.6536L13.8494 11.6353V12.9747L19.7714 16.3233L18.868 16.8017L13.8494 13.9315V15.2709L17.6636 17.4714L16.8606 17.9498L13.8494 16.2276V17.5671L15.7565 18.6195L13.9498 19.6719L2.50743 13.2617L13.9498 6.75587ZM2.40706 14.6968L13.8494 21.2027V22.1595L5.92007 17.6628V19.0022L13.9498 23.5946V24.647L5.92007 20.1503V21.4897L13.9498 26.0821L22.0799 21.3941V16.419L25.4926 14.5055V24.0729L13.9498 30.6745L2.40706 24.1686V14.6968Z" fill="currentColor"/>
+        </svg>
       </div>
     </footer>
 

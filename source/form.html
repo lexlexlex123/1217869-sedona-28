@@ -7,13 +7,34 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script>
+      window.onload = function () {
+        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
+        if (window.screen.width < 768) {
+          menu.style.display = "none";
+        }
+        else {
+          menu.style.display = "flex";
+        }
+      }
+
+      window.onresize = function () {
+        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
+        if (window.screen.width >= 768) {
+          menu.style.display = "flex";
+        }
+        else {
+          menu.style.display = "none";
+        }
+      }
+
       function openmenu() {
         let menu = document.getElementsByClassName("main-nav__wrapper")[0];
         menu.style.display = "flex";
       }
+
       function closemenu() {
-          let menu = document.getElementsByClassName("main-nav__wrapper")[0];
-          menu.style.display = "none";
+        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
+        menu.style.display = "none";
       }
     </script>
   </head>
@@ -34,7 +55,7 @@
             <span class="visually-hidden">Закрыть меню</span>
           </button>
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item">
               <a class="site-list__link" href="index.html">
                 Главная
               </a>
@@ -46,7 +67,7 @@
             </li>
             <li class="site-list__item site-list__item--blank">
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--active">
               <a class="site-list__link" href="form.html">
                 Форма отзыва
               </a>
@@ -78,29 +99,33 @@
             <div class="form__item">
               <h2 class="form__title">Представьтесь:</h2>
               <label class="form__label" for="name"><span class="form__label-text">Имя*:</span>
-                <input class="form__input" type="text" id="name" value="Пётр" required>
+                <input class="form__input" type="text" id="name" placeholder="Имя" required>
               </label>
               <label class="form__label" for="suname"><span class="form__label-text">Фамилия*:</span>
-                <input class="form__input" type="text" id="suname" value="Пустота" required>
+                <input class="form__input" type="text" id="suname" placeholder="Фамилия" required>
               </label>
               <label class="form__label" for="susuname"><span class="form__label-text">Отчество:</span>
-                <input class="form__input" type="text" id="susuname" value="Викторович">
+                <input class="form__input" type="text" id="susuname" placeholder="Отчество">
               </label>
             </div>
 
             <div class="form__item">
               <h2 class="form__title">Контактная информация:</h2>
               <label class="form__label" for="phone"><span class="form__label-text">Контактный телефон*:</span>
-                <input class="form__input" type="text" id="phone" placeholder="Введите телефон" required>
+                <div class="form__input-wrapper form__input-wrapper--phone">
+                  <input class="form__input form__input--phone" type="tel" id="phone" placeholder="Введите телефон" required>
+                </div>
               </label>
               <label class="form__label" for="email"><span class="form__label-text">Электронная почта*:</span>
-                <input class="form__input" type="email" id="email" placeholder="Введите e-mail" required>
+                <div class="form__input-wrapper form__input-wrapper--mail">
+                  <input class="form__input form__input--mail" type="email" id="email" placeholder="Введите e-mail" required>
+                </div>
               </label>
             </div>
           </div>
 
           <div class="form__item">
-            <h2 class="form__title">Ваше общее впечатление:</h2>
+            <h2 class="form__title form__title--line">Ваше общее впечатление:</h2>
             <label class="form__filter">
               <input class="form__radio-button" type="radio" name="review" value="positiv" checked>
               <span class="form__control-mark-round"></span>
@@ -119,7 +144,7 @@
           </div>
 
           <div class="form__item">
-            <h2 class="form__title">посещенные достопримечательности:</h2>
+            <h2 class="form__title form__title--line">посещенные<br>достопримечательности:</h2>
             <label class="form__filter">
               <input class="form__check-button" type="checkbox" name="attraction-bridge" checked>
               <span class="form__control-mark"></span>
@@ -143,7 +168,7 @@
           </div>
 
           <div class="form__item">
-            <h2 class="form__title">Опишите свои эмоции:</h2>
+            <h2 class="form__title form__title--line">Опишите свои эмоции:</h2>
             <textarea class="form__textuser" name="textuser" placeholder="Опишите подробно все свои восторги"></textarea>
           </div>
 
@@ -189,6 +214,9 @@
 
       <div class="dev">
         <span class="dev__content">Разработано</span>
+        <svg width="28" height="33" viewBox="0 0 28 33" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.1506 0.25H14.0502L0.5 1.58944V25.221L14.0502 32.875L27.5 25.221V1.58944L14.1506 0.25ZM25.5929 11.8266L14.0502 5.32075V5.22507H13.9498L13.8494 5.1294V5.22507L2.40706 11.8266V3.21591L13.9498 2.06782L25.5929 3.21591V11.8266ZM13.9498 6.75587L25.4926 13.1661L20.9758 15.6536L13.8494 11.6353V12.9747L19.7714 16.3233L18.868 16.8017L13.8494 13.9315V15.2709L17.6636 17.4714L16.8606 17.9498L13.8494 16.2276V17.5671L15.7565 18.6195L13.9498 19.6719L2.50743 13.2617L13.9498 6.75587ZM2.40706 14.6968L13.8494 21.2027V22.1595L5.92007 17.6628V19.0022L13.9498 23.5946V24.647L5.92007 20.1503V21.4897L13.9498 26.0821L22.0799 21.3941V16.419L25.4926 14.5055V24.0729L13.9498 30.6745L2.40706 24.1686V14.6968Z" fill="currentColor"/>
+        </svg>
       </div>
     </footer>
 
