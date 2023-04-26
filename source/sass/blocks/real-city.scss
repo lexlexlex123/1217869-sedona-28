@@ -13,7 +13,7 @@
   height: auto;
   box-sizing: border-box;
   object-fit: cover;
-  display: flex;
+  display: block;
 
   @media (min-width: $tablet-width) {
     height: 256px;
