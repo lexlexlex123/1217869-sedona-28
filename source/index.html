@@ -4,7 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- иконки -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/icon180.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script>
       window.onload = function () {
@@ -60,12 +65,10 @@
                 Главная
               </a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--blank">
               <a class="site-list__link" href="catalog.html">
                 Фото и видео
               </a>
-            </li>
-            <li class="site-list__item site-list__item--blank">
             </li>
             <li class="site-list__item">
               <a class="site-list__link" href="form.html">
@@ -101,7 +104,11 @@
               <span class="intro-real-city__number">— №1 —</span>
               <p class="intro-real-city__content">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
             </div>
-            <img class="real-city__image real-city__image--twocolumns" src="img/real_city.jpg" width="520" height="260" alt="настоящий городок.">
+            <picture class="real-city__image real-city__image--twocolumns">
+              <source media="(min-width: 1200px)" srcset="img/real-city-desktop.jpg 1x, img/real-city-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/real-city-tablet.jpg 1x, img/real-city-tablet@2x.jpg 2x">
+              <img class="real-city__image" src="img/real-city-mobile.jpg" srcset="img/real-city-mobile@2x.jpg 2x" width="520" height="260" alt="настоящий городок.">
+            </picture>
 
             <ul class="advantages__cards">
               <li class="advantages__card">
@@ -125,7 +132,11 @@
               <span class="intro-real-city__number">— №2 —</span>
               <p class="intro-real-city__content">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <img class="real-city__image real-city__image--twocolumnsinvert" src="img/bridge_diablo.jpg" width="520" height="260" alt="мост дъявола.">
+            <picture class="real-city__image real-city__image--twocolumnsinvert">
+              <source media="(min-width: 1200px)" srcset="img/bridge-diablo-desktop.jpg 1x, img/bridge-diablo-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/bridge-diablo-tablet.jpg 1x, img/bridge-diablo-tablet@2x.jpg 2x">
+              <img class="real-city__image" src="img/bridge-diablo-mobile.jpg" srcset="img/bridge-diablo-mobile@2x.jpg 2x" width="520" height="260" alt="мост дъявола.">
+            </picture>
           </li>
 
 

@@ -4,7 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- иконки -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/icon180.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script>
       window.onload = function () {
@@ -70,12 +75,10 @@
                 Главная
               </a>
             </li>
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item site-list__item--blank site-list__item--active">
               <a class="site-list__link" href="catalog.html">
                 Фото и видео
               </a>
-            </li>
-            <li class="site-list__item site-list__item--blank">
             </li>
             <li class="site-list__item">
               <a class="site-list__link" href="form.html">
@@ -109,7 +112,11 @@
         <ul class="catalog">
           <li class="catalog__item catalog__item--fullwidth">
             <a class="catalog__open" href="#" onclick="openimg(this); return false;">
-              <img class="catalog__image" src="img/non_native_spaces.jpg" width="280" height="280" alt="неродные просторы.">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/non-native-spaces-desktop.jpg 1x, img/non-native-spaces-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/non-native-spaces-tablet.jpg 1x, img/non-native-spaces-tablet@2x.jpg 2x">
+                <img class="catalog__image" src="img/non-native-spaces-mobile.jpg" srcset="img/non-native-spaces-mobile.jpg 2x" width="280" height="280" alt="неродные просторы.">
+              </picture>
             </a>
             <div class="catalog__description">
               <div class="catalog__wrapper">
@@ -127,7 +134,11 @@
 
           <li class="catalog__item">
             <a href="#" onclick="openimg(this); return false;">
-              <img class="catalog__image" src="img/local_vegetation.jpg" width="280" height="280" alt="местная растительность.">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/local_vegetation-desktop.jpg 1x, img/local_vegetation-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/local_vegetation-tablet.jpg 1x, img/local_vegetation-tablet@2x.jpg 2x">
+                <img class="catalog__image" src="img/local_vegetation-mobile.jpg" srcset="img/local_vegetation-mobile@2x.jpg 2x" width="280" height="280" alt="местная растительность.">
+              </picture>
             </a>
             <div class="catalog__description">
               <div class="catalog__wrapper">
@@ -145,7 +156,11 @@
 
           <li class="catalog__item">
             <a href="#" onclick="openimg(this); return false;">
-              <img class="catalog__image" src="img/road_north.jpg" width="280" height="280" alt="дорога на север.">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/road-north-desktop.jpg 1x, img/road-north-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/road-north-tablet.jpg 1x, img/road-north-tablet@2x.jpg 2x">
+                <img class="catalog__image" src="img/road-north-mobile.jpg" srcset="img/road-north-mobile@2x.jpg 2x" width="280" height="280" alt="дорога на север.">
+              </picture>
             </a>
             <div class="catalog__description">
               <div class="catalog__wrapper">
@@ -163,7 +178,11 @@
 
           <li class="catalog__item">
             <a href="#" onclick="openimg(this); return false;">
-              <img class="catalog__image" src="img/bridge_diablo_catalog.jpg" width="280" height="280" alt="мост дъявола.">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/bridge-diablo-desktop.jpg 1x, img/bridge-diablo-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/bridge-diablo-tablet.jpg 1x, img/bridge-diablo-tablet@2x.jpg 2x">
+                <img class="catalog__image" src="img/bridge-diablo-mobile.jpg" srcset="img/bridge-diablo-mobile@2x.jpg 2x" width="280" height="280" alt="мост дъявола.">
+              </picture>
             </a>
             <div class="catalog__description">
               <div class="catalog__wrapper">
@@ -188,7 +207,11 @@
       </section>
 
       <div class="video">
-        <img class="video__image" src="img/video.jpg" width="280" height="177" alt="видеопрезентация.">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+          <img class="video__image" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" width="280" height="177" alt="видеопрезентация.">
+        </picture>
       </div>
 
     </main>

@@ -25,9 +25,13 @@
   }
 }
 
+.site-list__item {
+  width: 20%;
+}
+
 .site-list__item--blank {
   @media (min-width: $tablet-width) {
-    width: 140px;
+    margin-right: 20%;
   }
 }
 
