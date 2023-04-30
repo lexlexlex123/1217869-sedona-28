@@ -26,7 +26,11 @@
 }
 
 .site-list__item {
-  width: 20%;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 20%;
+  }
 }
 
 .site-list__item--blank {
