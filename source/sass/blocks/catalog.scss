@@ -92,6 +92,16 @@
   }
 }
 
+.catalog__item:nth-child(2n + 1) .catalog__description {
+  @media (min-width: $tablet-width) {
+    background-color: #eaeaea;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
 .catalog__title {
   font-weight: 700;
   font-size: 14px;
