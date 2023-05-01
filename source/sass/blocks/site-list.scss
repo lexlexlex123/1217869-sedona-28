@@ -33,7 +33,7 @@
   }
 }
 
-.site-list__item--blank {
+.site-list__item:nth-child(4n - 2) {
   @media (min-width: $tablet-width) {
     margin-right: 20%;
   }
