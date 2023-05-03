@@ -25,6 +25,10 @@
   line-height: 26px;
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .intro-real-city__number {

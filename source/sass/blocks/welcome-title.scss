@@ -2,4 +2,9 @@
   margin: auto auto;
   width: 282px;
   overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    width: 460px;
+    height: auto;
+  }
 }
