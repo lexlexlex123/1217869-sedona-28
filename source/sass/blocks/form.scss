@@ -26,6 +26,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
 
   &:last-child {
     border-top: none;
@@ -44,34 +45,37 @@
     border: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 42px 0 48px;
+    gap: 16px;
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
   }
 }
 
 .form__userinfo {
   @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
   }
 
   & .form__item {
+    display: flex;
     flex-direction: column;
+    width: 100%;
 
     @media (min-width: $tablet-width) {
       display: flex;
-      padding: 0 50px;
+      box-sizing: border-box;
+      padding: 0 0 0 17px;
       margin: 0;
+      justify-content: flex-start;
     }
 
-    @media (min-width: $tablet-width) {
-      justify-content: flex-start;
+    @media (min-width: $desktop-width) {
+      padding: 0 0 0 25px;
     }
   }
 
@@ -81,6 +85,11 @@
     @media (min-width: $tablet-width) {
       border: none;
       border-right: 1px solid #dbdbdb;
+      padding: 0 17px 0 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0 25px 0 0;
     }
   }
 }
@@ -101,6 +110,33 @@
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / span 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / span 3;
+  }
+}
+
+.form__title-mark {
+  width: 100%;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  white-space: nowrap;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / span 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / span 4;
   }
 }
 
@@ -134,6 +170,7 @@
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .form__label-text {
