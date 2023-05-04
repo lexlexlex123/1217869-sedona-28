@@ -52,8 +52,19 @@
 
 .catalog__image {
   width: 100%;
+  height: 280px;
   object-fit: cover;
   display: flex;
+
+  @media (min-width: $tablet-width) {
+    height: 267px;
+  }
+}
+
+.catalog__item:first-child .catalog__image {
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
 }
 
 .catalog__image--full {

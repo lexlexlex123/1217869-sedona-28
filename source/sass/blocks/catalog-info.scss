@@ -3,14 +3,14 @@
   flex-direction: column;
   padding: 17px 6px 38px;
   justify-content: center;
-  gap: 38px;
+  gap: 30px;
 
   @media (min-width: $tablet-width) {
     padding: 58px 160px 66px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 62px 377px 64px;
+    padding: 62px 377px 85px;
   }
 }
 
@@ -21,6 +21,10 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .catalog-info__content {
@@ -28,4 +32,6 @@
   line-height: 21px;
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }

@@ -28,29 +28,84 @@
   gap: 16px;
   width: 100%;
 
-  &:last-child {
-    border-top: none;
-
-    @media (min-width: $tablet-width) {
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin: 0 156px;
-    }
-  }
-
   @media (min-width: $tablet-width) {
     border: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    column-gap: 16px;
   }
 
   @media (min-width: $desktop-width) {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    justify-content: center;
+    column-gap: 30px;
+  }
+}
+
+.form__item--last {
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 100px;
+  }
+}
+
+.form__wrapper--checkbox {
+  min-width: 100%;
+  display: grid;
+  box-sizing: border-box;
+  justify-self: center;
+  gap: 16px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / span 2;
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 16px;
+    padding: 41px 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / span 3;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    row-gap: 32px;
+    column-gap: 64px;
+    margin-bottom: 25px;
+  }
+}
+
+.form__wrapper--radio {
+  min-width: 100%;
+  display: grid;
+  box-sizing: border-box;
+  justify-self: center;
+  gap: 16px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / span 2;
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 16px;
+    padding: 41px 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / span 3;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    row-gap: 32px;
+    column-gap: 64px;
+    padding: 27px 53px;
   }
 }
 
@@ -59,12 +114,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
+    margin-bottom: 45px;
   }
 
   & .form__item {
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 16px;
 
     @media (min-width: $tablet-width) {
       display: flex;
@@ -75,7 +132,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      padding: 0 0 0 25px;
+      padding: 0 0 0 50px;
     }
   }
 
@@ -89,15 +146,16 @@
     }
 
     @media (min-width: $desktop-width) {
-      padding: 0 25px 0 0;
+      padding: 0 50px 0 0;
     }
   }
 }
 
 .form__title {
   width: 100%;
-  margin: 0 0 20px 0;
   font-weight: 700;
+  margin: 0;
+  margin-bottom: 15px;
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
@@ -110,6 +168,7 @@
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / span 2;
+    font-size: 21px;
   }
 
   @media (min-width: $desktop-width) {
@@ -133,6 +192,7 @@
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / span 2;
+    font-size: 21px;
   }
 
   @media (min-width: $desktop-width) {
@@ -184,7 +244,6 @@
   font-size: 18px;
   line-height: 26px;
   font-family: "PT Sans", sans-serif;
-  margin-bottom: 16px;
   height: 58px;
   width: 100%;
   box-sizing: border-box;
@@ -265,6 +324,7 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
+    justify-content: center;
   }
 }
 
@@ -294,13 +354,14 @@
   background-color: #f2f2f2;
   border-radius: 50%;
   position: absolute;
+  left: 0;
 }
 
 .form__control-label {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  margin-left: 26px;
+  margin-left: 16px;
 }
 
 .form__radio-button {
@@ -327,6 +388,7 @@
   height: 46px;
   background-color: #f2f2f2;
   position: absolute;
+  left: 0;
   border-radius: 4px;
 }
 
@@ -405,6 +467,7 @@
   border: 4px solid #e5e5e5;
   box-sizing: border-box;
   outline: none;
+  display: flex;
 
   &::placeholder {
     color: rgba(0, 0, 0, 0.3);
@@ -413,10 +476,11 @@
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / span 2;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 156px;
+    grid-column: 1 / span 3;
   }
 
   &:hover {
