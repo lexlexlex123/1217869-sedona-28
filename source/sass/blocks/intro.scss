@@ -37,8 +37,15 @@
 }
 
 .intro__image--mini {
-  height: 300px;
   background-position: center bottom;
+
+  @media (min-width: $tablet-width) {
+    height: 290px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 300px;
+  }
 }
 
 .intro__title {
@@ -92,10 +99,12 @@
   gap: 35px;
 
   @media (min-width: $tablet-width) {
-    padding: 66px 150px;
+    padding: 66px 150px 105px;
+    gap: 20px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 115px 370px 65px;
+    gap: 35px;
   }
 }
