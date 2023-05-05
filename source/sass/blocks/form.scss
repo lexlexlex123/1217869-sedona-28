@@ -83,6 +83,7 @@
     row-gap: 32px;
     column-gap: 64px;
     margin-bottom: 25px;
+    padding: 0 40px;
   }
 }
 
@@ -332,6 +333,7 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
+    width: 100%;
     justify-content: center;
   }
 }
