@@ -38,14 +38,21 @@
 
 .intro__image--mini {
   background-position: center bottom;
+  height: 155px;
+  padding: 0;
 
   @media (min-width: $tablet-width) {
     height: 290px;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
     height: 300px;
   }
+}
+
+.intro__image--mini .welcome-title {
+  height: 155px;
 }
 
 .intro__title {
