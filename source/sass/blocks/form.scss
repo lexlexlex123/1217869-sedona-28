@@ -53,8 +53,16 @@
   }
 
   @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 0 100px;
     margin-bottom: 70px;
+  }
+
+  & .form__title {
+    @media (min-width: $desktop-width) {
+      grid-column: 1 / span 2;
+    }
   }
 }
 
@@ -82,8 +90,8 @@
     justify-content: center;
     row-gap: 32px;
     column-gap: 64px;
-    margin-bottom: 25px;
-    padding: 0 40px;
+    margin-bottom: 40px;
+    padding: 20px 40px;
   }
 }
 
@@ -485,18 +493,25 @@
   outline: none;
   display: flex;
 
-  &::placeholder {
-    color: rgba(0, 0, 0, 0.3);
-    font-weight: 700;
-  }
-
   @media (min-width: $tablet-width) {
     grid-column: 1 / span 2;
     margin-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 2;
+  }
+
+  &::placeholder {
+    color: rgb(0,0,0);
+    opacity: 0.3;
+    font-weight: 700;
+  }
+
+  &::-moz-placeholder {
+    color: rgb(0,0,0);
+    opacity: 0.3;
+    font-weight: 700;
   }
 
   &:hover {
