@@ -33,7 +33,7 @@
   grid-template-columns: 1fr;
   list-style: none;
   gap: 25px;
-  padding: 37px 18px 37px 65px;
+  padding: 23px 18px 46px;
   margin: 0;
 
   @media (min-width: $tablet-width) {
@@ -46,11 +46,18 @@
 }
 
 .advantages__card {
+  margin-left: 47px;
+
   @media (min-width: $tablet-width) {
-    padding: 158px 33px 60px;
+    margin-left: 0;
+    padding: 60px 33px 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 69px 50px;
   }
 }
 
@@ -62,6 +69,15 @@
   text-align: center;
   text-transform: uppercase;
   margin: 0;
+  display: flex;
+  align-items: center;
+  margin-left: -47px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    font-size: 21px;
+    flex-direction: column;
+  }
 }
 
 .advantages__card-content {
@@ -89,6 +105,7 @@
 .advantages__cards-more {
   display: grid;
   grid-template-columns: 1fr;
+  align-items: start;
   padding: 0 18px;
   background: #eeeeee;
 
@@ -109,6 +126,10 @@
   @media (min-width: $tablet-width) {
     padding: 41px 33px 63px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 52px 50px;
+  }
 }
 
 .advantages__card-more:not(:last-child) {
@@ -126,18 +147,20 @@
 
 .advantages__card-title--house::before {
   content: "";
-  position: absolute;
+  display: flex;
+  flex-direction: row;
   background-image: url("../img/icon-house.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 42px 37px;
-  width: 60px - 18px;
-  height: 37px;
-  left: -65px + 18px;
+  width: 40px;
+  height: 40px;
+  margin-right: 7px;
 
   @media (min-width: $tablet-width) {
-    left: calc(50% - 38px);
-    top: -37px - 50px;
+    margin-bottom: 26px;
+    flex-direction: column;
+    text-align: center;
     width: 77px;
     height: 72px;
     background-size: 77px 72px;
@@ -151,18 +174,20 @@
 
 .advantages__card-title--food::before {
   content: "";
-  position: absolute;
+  display: flex;
+  flex-direction: row;
   background-image: url("../img/icon-burger.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 42px 37px;
-  width: 60px - 18px;
-  height: 37px;
-  left: -65px + 18px;
+  width: 40px;
+  height: 40px;
+  margin-right: 7px;
 
   @media (min-width: $tablet-width) {
-    left: calc(50% - 38px);
-    top: -37px - 50px;
+    margin-bottom: 26px;
+    flex-direction: column;
+    text-align: center;
     width: 77px;
     height: 72px;
     background-size: 77px 72px;
@@ -176,18 +201,20 @@
 
 .advantages__card-title--gift::before {
   content: "";
-  position: absolute;
+  display: flex;
+  flex-direction: row;
   background-image: url("../img/icon-gift.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 42px 37px;
-  width: 60px - 18px;
-  height: 37px;
-  left: -65px + 18px;
+  width: 40px;
+  height: 40px;
+  margin-right: 7px;
 
   @media (min-width: $tablet-width) {
-    left: calc(50% - 38px);
-    top: -37px - 50px;
+    margin-bottom: 26px;
+    flex-direction: column;
+    text-align: center;
     width: 77px;
     height: 72px;
     background-size: 77px 72px;

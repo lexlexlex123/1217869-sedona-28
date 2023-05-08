@@ -9,11 +9,11 @@
 }
 
 .real-city__image {
-  width: 100%;
-  height: auto;
+  min-width: 100%;
+  min-height: 100%;
   box-sizing: border-box;
   object-fit: cover;
-  display: block;
+  display: flex;
 
   @media (min-width: $tablet-width) {
     height: 256px;
@@ -30,5 +30,20 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / span 2;
     order: -1;
+  }
+}
+
+.real-city__text {
+  padding: 54px 18px;
+  justify-self: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 52px 33px 31px;
+    width: 190px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 52px 65px 51px;
+    width: 270px;
   }
 }

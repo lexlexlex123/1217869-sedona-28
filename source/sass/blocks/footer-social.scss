@@ -33,3 +33,35 @@
     color: rgba(255, 255, 255, 0.3);
   }
 }
+
+.footer-social__link--vk::after {
+  content: "";
+  mask-image: url("../img/sprite.svg#icon-vk");
+  background-color: #ffffff;
+  width: 24px;
+  height: 14px;
+}
+
+.footer-social__link:active::after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-social__link:focus::after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-social__link--telegramm::after {
+  content: "";
+  mask-image: url("../img/sprite.svg#icon-telegramm");
+  background-color: #ffffff;
+  width: 21px;
+  height: 17px;
+}
+
+.footer-social__link--youtube::after {
+  content: "";
+  mask-image: url("../img/sprite.svg#icon-youtube");
+  background-color: #ffffff;
+  width: 24px;
+  height: 18px;
+}
