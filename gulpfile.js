@@ -10,8 +10,8 @@ import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgo';
-//import svgstore from 'gulp-svgstore';
 import del from del;
+//import svgstore from 'gulp-svgstore';
 
 // Styles
 
@@ -91,7 +91,7 @@ const copy = () => {
 // CLEAN
 
 const clean = () => {
-  return del('build')
+  return del('build');
 }
 
 // Server
@@ -108,12 +108,19 @@ const server = (done) => {
   done();
 }
 
+// RELOAD
+
+const reload = (done) => {
+  browser.reload()
+  done()
+}
+
 // Watcher
 
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/*.js', gulp.series(js));
-  gulp.watch('source/*.html', gulp.series(html, browser.reload()));
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 // BUILD
@@ -130,7 +137,7 @@ export const build = gulp.series(
   styles,
   server,
   watcher
-  ),
+  )
 );
 
 // DEFAULT
@@ -144,12 +151,10 @@ export default gulp.series(
   copyImages,
   js,
   html,
-  styles,
-  server,
-  watcher
+  styles
   ),
   gulp.series(
     server,
     watcher
-  ),
+  )
 );
