@@ -10,7 +10,7 @@ import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgo';
-import del from del;
+import {deleteAsync} from 'del';
 //import svgstore from 'gulp-svgstore';
 
 // Styles
@@ -91,7 +91,7 @@ const copy = () => {
 // CLEAN
 
 const clean = () => {
-  return del('build');
+  return deleteAsync(['build']);
 }
 
 // Server
@@ -134,10 +134,10 @@ export const build = gulp.series(
   copyImages,
   js,
   html,
-  styles,
+  styles
+  ),
   server,
   watcher
-  )
 );
 
 // DEFAULT
@@ -153,8 +153,6 @@ export default gulp.series(
   html,
   styles
   ),
-  gulp.series(
-    server,
-    watcher
-  )
+  server,
+  watcher
 );
