@@ -52,7 +52,11 @@
 }
 
 .intro__image--mini .welcome-title {
-  height: 155px;
+  height: 39px;
+
+  @media (min-width: $tablet-width) {
+    height: 77px;
+  }
 }
 
 .intro__title {

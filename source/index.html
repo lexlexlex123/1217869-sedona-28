@@ -10,38 +10,8 @@
     <link rel="apple-touch-icon" href="img/favicons/icon180.png"> <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
 
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script>
-      window.onload = function () {
-        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
-        if (window.screen.width < 768) {
-          menu.style.display = "none";
-        }
-        else {
-          menu.style.display = "flex";
-        }
-      }
-
-      window.onresize = function () {
-        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
-        if (window.screen.width >= 768) {
-          menu.style.display = "flex";
-        }
-        else {
-          menu.style.display = "none";
-        }
-      }
-
-      function openmenu() {
-        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
-        menu.style.display = "flex";
-      }
-
-      function closemenu() {
-        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
-        menu.style.display = "none";
-      }
-    </script>
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <script src="js/script.js"></script>
   </head>
   <body class="page__body">
     <h1 class="visually-hidden">Главная страница Седоны</h1>

@@ -10,48 +10,8 @@
     <link rel="apple-touch-icon" href="img/favicons/icon180.png"> <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
 
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script>
-      window.onload = function () {
-        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
-        if (window.screen.width < 768) {
-          menu.style.display = "none";
-        }
-        else {
-          menu.style.display = "flex";
-        }
-      }
-
-      window.onresize = function () {
-        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
-        if (window.screen.width >= 768) {
-          menu.style.display = "flex";
-        }
-        else {
-          menu.style.display = "none";
-        }
-      }
-
-      function openmenu() {
-        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
-        menu.style.display = "flex";
-      }
-
-      function closemenu() {
-        let menu = document.getElementsByClassName("main-nav__wrapper")[0];
-        menu.style.display = "none";
-      }
-
-      function openimg(element) {
-        let img = element.getElementsByClassName("catalog__image")[0];
-        if (img.classList.contains('catalog__image--full')) {
-          img.classList.remove('catalog__image--full');
-        }
-        else {
-          img.classList.add('catalog__image--full');
-        }
-      }
-    </script>
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <script src="js/catalog.js"></script>
   </head>
   <body class="page__body">
     <h1 class="visually-hidden">Фото и видео</h1>
@@ -133,7 +93,7 @@
     <main class="page__main">
       <section class="intro">
         <div class="intro__image intro__image--mini">
-          <img class="welcome-title" src="img/sedona.svg" width="282" height="214" alt="welcome to the gargeous SEDONA.">
+          <img class="welcome-title" src="img/sedona.svg" width="229" height="39" alt="welcome to the gargeous SEDONA.">
         </div>
         <div class="intro__content">
           <h2 class="intro__title">Фото и видео</h2>
