@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <!-- иконки -->
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/icon180.png"> <!-- 180×180 -->
@@ -119,16 +121,14 @@
 
             <div class="form__item">
               <h2 class="form__title">Контактная информация:</h2>
-              <label class="form__label" for="phone"><span class="form__label-text">Контактный телефон*:</span>
+              <label class="form__label" for="phone"><span class="form__label-text">Контактный телефон*:</span></label>
                 <div class="form__input-wrapper form__input-wrapper--phone">
                   <input class="form__input form__input--phone" type="tel" id="phone" placeholder="Введите телефон" required>
                 </div>
-              </label>
-              <label class="form__label" for="email"><span class="form__label-text">Электронная почта*:</span>
+              <label class="form__label" for="email"><span class="form__label-text">Электронная почта*:</span></label>
                 <div class="form__input-wrapper form__input-wrapper--mail">
                   <input class="form__input form__input--mail" type="email" id="email" placeholder="Введите e-mail" required>
                 </div>
-              </label>
             </div>
           </div>
 
@@ -212,10 +212,12 @@
         </li>
       </ul>
 
-      <div class="dev">
-        <span class="dev__content">Разработано</span>
-        <div class="dev__icon"></div>
-      </div>
+      <a class="dev" href="https://htmlacademy.ru/">
+        <div class="dev__sponsor">
+          <span class="dev__content">Разработано</span>
+          <div class="dev__icon"></div>
+        </div>
+      </a>
     </footer>
 
     <section class="page__modal">
