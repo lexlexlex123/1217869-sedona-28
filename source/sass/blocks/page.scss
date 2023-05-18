@@ -64,7 +64,7 @@
 .page__failure {
   background-color: #ffffff;
   width: 100%;
-  min-height: 347px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,12 +85,22 @@
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .page__failure--content p {
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+  }
 }
 
 .page__failure--content {
@@ -125,16 +135,30 @@
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .page__success--content p {
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+  }
 }
 
 .page__success--button {
   background-color: #f2f2f2;
   display: flex;
   padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 44px 91px;
+  }
 }

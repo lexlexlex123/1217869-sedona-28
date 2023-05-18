@@ -586,5 +586,12 @@
 }
 
 .form__button--ok {
-  width: 180px;
+  width: calc(100% - 140px);
+  display: block;
+  margin: 0 70px 35px;
+
+  @media (min-width: $tablet-width) {
+    width: calc(100% - 128px);
+    margin: 0 64px 49px;
+  }
 }
