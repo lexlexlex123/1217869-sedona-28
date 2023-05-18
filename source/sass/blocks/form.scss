@@ -487,11 +487,11 @@
   font-size: 18px;
   line-height: 26px;
   font-family: "PT Sans", sans-serif;
-  color: rgba(0, 0, 0, 0.3);
-  border: 4px solid #e5e5e5;
+  color: #000000;
   box-sizing: border-box;
   outline: none;
   display: flex;
+  border: none;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / span 2;
@@ -516,17 +516,16 @@
 
   &:hover {
     background-color: #e5e5e5;
-    border: 4px solid #e5e5e5;
   }
 
   &:focus {
-    background-color: #ffffff;
-    border: 4px solid #e5e5e5;
+    background-color: #e5e5e5;
+    color: #333333;
   }
 
   &:active {
-    background-color: #ffffff;
-    border: 4px solid #e5e5e5;
+    background-color: #e5e5e5;
+    color: #333333;
   }
 }
 
@@ -587,5 +586,12 @@
 }
 
 .form__button--ok {
-  width: 180px;
+  width: calc(100% - 140px);
+  display: block;
+  margin: 0 70px 35px;
+
+  @media (min-width: $tablet-width) {
+    width: calc(100% - 128px);
+    margin: 0 64px 49px;
+  }
 }
