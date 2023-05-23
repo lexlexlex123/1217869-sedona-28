@@ -97,7 +97,7 @@
         <div class="intro__image">
           <img class="welcome-title" src="img/intro_text.svg" width="282" height="214" alt="welcome to the gargeous SEDONA.">
         </div>
-        <div class="intro__content intro__content--index">
+        <div class="intro__content-index">
           <h2 class="intro__title intro__title--index">СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h2>
           <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
@@ -185,6 +185,15 @@
       <section class="map">
         <h2 class="visually-hidden">карта аризоны</h2>
         <iframe class="map__image" title="карта аризоны." src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2280353.907615116!2d-113.36299634072586!3d34.483713866306964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b08ebcb4c186b%3A0x423927b17fc1cd71!2z0JDRgNC40LfQvtC90LAsINCh0KjQkA!5e0!3m2!1sru!2sru!4v1682080552109!5m2!1sru!2sru" width="320" height="350" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <picture class="map__image-static">
+          <source type="image/webp" media="(min-width: 1200px)" srcset="img/map-desktop.webp">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp">
+          <source type="image/webp" srcset="img/map-mobile.webp">
+
+          <source media="(min-width: 1200px)" srcset="img/map-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="img/map-tablet.jpg">
+          <img class="map__img" src="img/map-mobile.jpg" width="320" height="350" alt="карта аризоны.">
+        </picture>
       </section>
     </main>
 

@@ -57,6 +57,14 @@
   @media (min-width: $tablet-width) {
     display: none;
   }
+
+  &:hover .main-nav__toggle {
+    opacity: 0.6;
+  }
+
+  &:active .main-nav__toggle {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__toggle {

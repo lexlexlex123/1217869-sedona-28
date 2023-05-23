@@ -77,7 +77,18 @@
     margin-left: 0;
     font-size: 21px;
     flex-direction: column;
+    width: 100px;
   }
+}
+
+.advantages__card-more .advantages__card-title {
+  margin-left: 0;
+}
+
+.advantages__card-number {
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
 }
 
 .advantages__card-content {
@@ -86,7 +97,7 @@
   text-transform: uppercase;
   color: #333333;
   margin: 0;
-  margin-top: 16px;
+  margin-top: 10px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -120,7 +131,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 17px;
+  gap: 5px;
   padding: 24px 20px;
 
   @media (min-width: $tablet-width) {
