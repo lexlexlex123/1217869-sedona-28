@@ -48,6 +48,12 @@
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
+  margin-top: 15px;
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin-top: 0;
+  }
 }
 
 .page__modal {
