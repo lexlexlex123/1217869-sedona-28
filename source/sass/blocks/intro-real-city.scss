@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 15px;
   justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 0 18px;
   position: relative;
@@ -12,19 +13,28 @@
   }
 }
 
-.intro-real-city--decor {
-  margin-top: 12px;
+.intro-real-city.intro-real-city--decor {
+  padding: 70px 18px 40px;
+  position: relative;
+  width: calc(100% - 36px);
+  overflow: hidden;
+  display: flex;
+
+  @media (min-width: $desktop-width) {
+    padding: 40px 18px;
+  }
 
   &::before {
     @media (max-width: $tablet-width) {
       content: "";
-      min-width: calc(100% + 36px);
-      height: 40px;
+      width: 768px;
+      height: 37px;
       position: absolute;
       background-image: url("../img/advantages-decor.svg");
       background-repeat: no-repeat;
-      top: -12px;
-      left: -18px;
+      background-position: top center;
+      top: 0;
+      overflow: hidden;
     }
   }
 }
@@ -35,9 +45,11 @@
   line-height: 26px;
   text-transform: uppercase;
   margin: 0;
+  width: 220px;
 
   @media (min-width: $tablet-width) {
     font-size: 21px;
+    width: 151px;
   }
 }
 

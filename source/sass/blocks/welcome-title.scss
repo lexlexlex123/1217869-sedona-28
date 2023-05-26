@@ -9,3 +9,14 @@
     height: auto;
   }
 }
+
+.welcome-title.welcome-title--mini {
+  width: 229px;
+  margin-top: 50px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 100px;
+    width: 460px;
+    height: auto;
+  }
+}

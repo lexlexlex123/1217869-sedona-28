@@ -1,6 +1,11 @@
 .map {
   height: 350px;
   position: relative;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .map__image {

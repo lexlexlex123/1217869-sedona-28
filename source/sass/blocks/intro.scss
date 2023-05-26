@@ -39,7 +39,7 @@
 
 .intro__image--mini {
   background-position: center bottom;
-  height: 155px;
+  height: 157px;
   padding: 0;
 
   @media (min-width: $tablet-width) {
@@ -91,7 +91,7 @@
 }
 
 .intro__content-index {
-  padding: 35px 25px;
+  padding: 35px 25px 15px;
   display: flex;
   flex-direction: column;
   gap: 35px;
@@ -107,10 +107,10 @@
 }
 
 .intro__content-form {
-  padding: 37px 18px;
+  padding: 37px 18px 28px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
 
   @media (min-width: $tablet-width) {
     padding: 47px 124px 55px;
@@ -122,10 +122,10 @@
 }
 
 .intro__content {
-  padding: 0 18px;
+  padding: 38px 18px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
 
   @media (min-width: $tablet-width) {
     padding: 66px 150px 105px;
