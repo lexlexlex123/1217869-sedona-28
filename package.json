@@ -44,5 +44,9 @@
   "engines": {
     "node": "^16"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "16": "^0.0.2",
+    "node": "^20.5.0"
+  }
 }
